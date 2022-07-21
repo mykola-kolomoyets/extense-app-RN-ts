@@ -1,5 +1,5 @@
 import {FC, useLayoutEffect} from "react";
-import {View, Text} from "react-native";
+import {View} from "react-native";
 import {NativeStackScreenProps} from "@react-navigation/native-stack";
 
 import {StackScreensParamList} from "../../utils/types/screens";
@@ -8,9 +8,11 @@ import {Colors} from "../../utils/styles";
 
 import useStackedNavigation from "../../utils/hooks/navigation/useStackedNavigation";
 
-import styles from './manage-expense.styles';
-import IconButton, {IconButtonProps} from "../../components/ui/button/icon-button";
+import {IconButtonProps} from "../../components/ui/button/icon-button";
 import Button from "../../components/ui/button";
+import ExpenseForm from "../../components/ui/expense-form";
+
+import styles from './manage-expense.styles';
 
 const deleteIconProps: IconButtonProps = {
 	name: "trash",
@@ -42,6 +44,8 @@ const ManageExpenses:
 	
 	return (
 		<View style={styles.container}>
+			<ExpenseForm />
+			
 			<View style={styles.buttonsContainer}>
 				<Button.Flat title="Cancel" onPress={onCancelPress} style={styles.button}/>
 				<Button.Primary title={isEditing ? "Update" : "Add"} onPress={onConfirmPress} style={styles.button}/>
@@ -55,6 +59,7 @@ const ManageExpenses:
 					/>
 				</View>
 			)}
+			
 		</View>
 	)
 };
