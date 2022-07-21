@@ -1,19 +1,19 @@
 import {FC} from "react";
 import {FlatList} from "react-native";
 
-import {ExpenseItem} from "../../../utils/types/extenses";
+import {ExpenseItem as ExpenseItemType} from "../../../utils/types/extenses";
 
-import ExpenseItemComponent from './../expense-item';
+import ExpenseItem from './../expense-item';
 
 import styles from './expenses-list.styles';
 
 type ExpensesListProps = {
-	items: ExpenseItem[];
+	items: ExpenseItemType[];
 }
 const ExpensesList: FC<ExpensesListProps> = ({items}) => (
 	<FlatList
 		data={items}
-		renderItem={(expenses) => <ExpenseItemComponent data={expenses.item}/>}
+		renderItem={(expenses) => <ExpenseItem data={expenses.item}/>}
 		keyExtractor={(expense) => expense.id}
 	/>
 );

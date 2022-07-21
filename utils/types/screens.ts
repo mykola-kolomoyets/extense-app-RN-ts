@@ -7,6 +7,6 @@ export type BottomTansScreensParamList = {
 }
 
 export type StackScreensParamList = {
-	[StackScreens.manageExpenses]: undefined;
+	[StackScreens.manageExpenses]: { id: string | null };
 	[StackScreens.overview]: undefined;
 };

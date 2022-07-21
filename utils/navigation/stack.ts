@@ -1,14 +1,22 @@
 import {NativeStackNavigationOptions} from "@react-navigation/native-stack";
-import {BottomTabNavigationOptions} from "@react-navigation/bottom-tabs";
+import {Colors} from "../styles";
 
 /**
  * Navigator options
  */
+export const stackNavigatorScreenProps: NativeStackNavigationOptions = {
+	headerStyle: {backgroundColor: Colors.primary500}
+};
 
 /**
  * Screens options
  */
 export const expensesOverviewScreenOptions: NativeStackNavigationOptions = {
 	headerShown: false,
-	title: 'Overview'
+	title: 'Overview',
+}
+
+export const manageExpenseScreenOptions: NativeStackNavigationOptions = {
+	presentation: 'modal',
+	headerTitleStyle: { color: Colors.white }
 }

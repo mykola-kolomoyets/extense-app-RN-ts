@@ -7,14 +7,25 @@ import ManageExpenses from "../../screens/manage-expense";
 import {StackScreens} from "../../utils/enums/screens";
 import {StackScreensParamList} from "../../utils/types/screens";
 
-import {expensesOverviewScreenOptions} from "../../utils/navigation/stack";
+import {
+	expensesOverviewScreenOptions,
+	manageExpenseScreenOptions,
+	stackNavigatorScreenProps
+} from "../../utils/navigation/stack";
 
 
 const Stack = createNativeStackNavigator<StackScreensParamList>();
 
 const StackNavigator = () => (
-	<Stack.Navigator initialRouteName={StackScreens.overview}>
-		<Stack.Screen name={StackScreens.manageExpenses} component={ManageExpenses}/>
+	<Stack.Navigator
+		initialRouteName={StackScreens.overview}
+		screenOptions={stackNavigatorScreenProps}
+	>
+		<Stack.Screen
+			name={StackScreens.manageExpenses}
+			component={ManageExpenses}
+			options={manageExpenseScreenOptions}
+		/>
 		
 		<Stack.Screen
 			name={StackScreens.overview}

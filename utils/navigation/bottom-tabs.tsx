@@ -2,6 +2,7 @@ import {BottomTabNavigationOptions} from "@react-navigation/bottom-tabs";
 import { Ionicons } from '@expo/vector-icons';
 
 import {Colors} from "../styles";
+import IconButton from "../../components/ui/button/icon-button";
 
 /**
  * Navigator options

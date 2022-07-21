@@ -5,7 +5,7 @@ import Navigator from "./components/navigation";
 export default function App() {
 	return (
 		<Fragment>
-			<StatusBar style="auto"/>
+			<StatusBar style="inverted"/>
 			
 			<Navigator/>
 		</Fragment>

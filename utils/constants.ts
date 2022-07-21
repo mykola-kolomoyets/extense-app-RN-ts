@@ -1,0 +1,1 @@
+export const fromMillisecondsToDaysCoef = 1.15740741 * (10 ** (-8));

@@ -1,3 +1,4 @@
 export enum Period {
-	last7Days = 'Last 7 days'
+	last7Days = 'Last 7 days',
+	total = 'Total'
 }

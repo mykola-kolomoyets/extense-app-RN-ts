@@ -1,3 +1,12 @@
 import  { StyleSheet } from "react-native";
 
-export default StyleSheet.create({});
+import {Colors} from "../../../utils/styles";
+
+export default StyleSheet.create({
+	container: {
+		flex: 1,
+		paddingVertical: 24,
+		paddingHorizontal: 16,
+		backgroundColor: Colors.primary700
+	}
+});

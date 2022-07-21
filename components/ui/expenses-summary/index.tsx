@@ -6,7 +6,7 @@ import {ExpenseItem} from "../../../utils/types/extenses";
 
 import {getFixedNumber, getSum} from "../../../utils/functions";
 
-import styles from './expenses-summary';
+import styles from './expenses-summary.styles';
 
 type ExpensesSummaryProps = {
 	expenses: ExpenseItem[];
@@ -16,9 +16,9 @@ const ExpensesSummary: FC<ExpensesSummaryProps> = ({period, expenses}) => {
 	const summaryAmount = getSum(expenses, 'amount');
 	
 	return (
-		<View>
-			<Text>{period}</Text>
-			<Text>${getFixedNumber(summaryAmount)}</Text>
+		<View style={styles.container}>
+			<Text style={styles.period}>{period}</Text>
+			<Text style={styles.amount}>${getFixedNumber(summaryAmount)}</Text>
 		</View>
 	);
 }

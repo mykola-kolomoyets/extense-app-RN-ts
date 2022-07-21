@@ -1,8 +1,11 @@
-import { Text } from "react-native";
+import {EXPENSES} from "../../data";
 
-const RecentExpenses = () => {
-	
-	return <Text>Recent expenses screen</Text>
-};
+import ExpensesOutput from "../../components/layout/expenses-output";
+
+import {Period} from "../../utils/enums/common";
+
+const RecentExpenses = () => (
+	<ExpensesOutput expenses={EXPENSES} period={Period.last7Days}/>
+);
 
 export default RecentExpenses;
