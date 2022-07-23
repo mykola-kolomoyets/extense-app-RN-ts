@@ -18,16 +18,5 @@ export default StyleSheet.create({
 		
 		borderTopWidth: 2,
 		borderTopColor: Colors.primary200
-	},
-	
-	buttonsContainer: {
-		flexDirection: "row",
-		justifyContent: "center",
-		alignItems: "center"
-	},
-	
-	button: {
-		minWidth: Dimensions.get("screen").width / 2 - 32,
-		marginHorizontal: 8
 	}
 });

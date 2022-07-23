@@ -11,6 +11,7 @@ type InputProps = {
 	type?: InputType;
 	style?: ObjWithKeys<string | number>;
 	inputProps?: TextInputProps;
+	error?: string;
 }
 
 const defaultTextInputProps: TextInputProps = {
@@ -22,7 +23,7 @@ const defaultTextInputProps: TextInputProps = {
 	autoFocus: false
 }
 
-const Input: FC<InputProps> = ({label, type = InputType.text, style, inputProps}) => {
+const Input: FC<InputProps> = ({label, error, type = InputType.text, style, inputProps}) => {
 	const textInputProps: TextInputProps = {
 		...defaultTextInputProps,
 		...inputProps,
@@ -32,12 +33,14 @@ const Input: FC<InputProps> = ({label, type = InputType.text, style, inputProps}
 	const textInputStyles = [
 		styles.input,
 		textInputProps.multiline && styles.inputMultiline,
+		...(error ? [styles.error] : [])
 	];
 	
 	return (
 		<View style={[styles.container, style]}>
 			<Text style={styles.label}>{label}</Text>
 			<TextInput style={textInputStyles} {...textInputProps} />
+			<Text style={styles.errorText}>{error}</Text>
 		</View>
 	)
 };

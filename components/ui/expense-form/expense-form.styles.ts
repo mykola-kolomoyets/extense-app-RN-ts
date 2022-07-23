@@ -1,4 +1,4 @@
-import {StyleSheet} from "react-native";
+import {Dimensions, StyleSheet} from "react-native";
 import {Colors} from "../../../utils/styles";
 
 export default StyleSheet.create({
@@ -22,5 +22,16 @@ export default StyleSheet.create({
 	
 	rowInput: {
 		flex: 1,
+	},
+	
+	buttonsContainer: {
+		flexDirection: "row",
+		justifyContent: "center",
+		alignItems: "center"
+	},
+	
+	button: {
+		minWidth: Dimensions.get("screen").width / 2 - 32,
+		marginHorizontal: 8
 	}
 });

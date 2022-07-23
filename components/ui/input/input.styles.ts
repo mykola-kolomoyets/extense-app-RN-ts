@@ -20,6 +20,8 @@ export default StyleSheet.create({
 		paddingHorizontal: 16,
 		
 		borderRadius: 6,
+		borderWidth: 2,
+		borderColor: "transparent",
 		
 		fontSize: 18,
 		
@@ -30,5 +32,17 @@ export default StyleSheet.create({
 	inputMultiline: {
 		minHeight: 100,
 		textAlignVertical: "top"
+	},
+	
+	error: {
+		borderColor: Colors.error500,
+	},
+	
+	errorText: {
+		marginTop: 4,
+		
+		fontSize: 12,
+		
+		color: Colors.error50
 	}
 });
